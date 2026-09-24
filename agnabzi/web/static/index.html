@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="netpulse-token" content="__NETPULSE_TOKEN__">
+  <meta name="color-scheme" content="light dark">
+  <title>NetPulse</title>
+  <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/css/app.css">
+  <script type="module" src="/static/js/main.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#overview">
+        <img class="brand-mark" src="/static/img/favicon.svg" alt="" width="28" height="28">
+        <span class="brand-name">NetPulse</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Main"></nav>
+      <div class="sidebar-footer">
+        <div class="privilege" id="privilege"></div>
+        <button class="btn btn-ghost btn-quit" id="quit-button" type="button"></button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1 class="view-title" id="view-title"></h1>
+          <p class="view-subtitle" id="view-subtitle"></p>
+        </div>
+        <div class="topbar-actions">
+          <span class="live" id="live-indicator"><span class="live-dot"></span><span class="live-label"></span></span>
+        </div>
+      </header>
+      <div id="banner-slot"></div>
+      <div id="view-root" class="view-root"></div>
+    </main>
+  </div>
+
+  <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <dialog class="dialog" id="dialog">
+    <form method="dialog" class="dialog-body">
+      <h2 class="dialog-title" id="dialog-title"></h2>
+      <p class="dialog-message" id="dialog-message"></p>
+      <div class="dialog-actions">
+        <button class="btn btn-ghost" value="cancel" id="dialog-cancel"></button>
+        <button class="btn btn-primary" value="confirm" id="dialog-confirm"></button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>
